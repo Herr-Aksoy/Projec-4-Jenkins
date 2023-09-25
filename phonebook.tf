@@ -97,8 +97,8 @@ data "template_file" "worker" {
     chmod +x /usr/local/bin/docker-compose
     yum install python3 -y
     amazon-linux-extras install epel -y
-    yum install python-pip -y
-    pip install ec2instanceconnectcli
+    yum install python3-pip -y
+    pip3 install ec2instanceconnectcli
     # uninstall aws cli version 1
     rm -rf /bin/aws
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
